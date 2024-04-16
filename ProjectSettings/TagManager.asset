@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Coin
+  - Enemy1
+  - Enemy2
+  - wall
+  - weapon
   layers:
   - Default
   - TransparentFX

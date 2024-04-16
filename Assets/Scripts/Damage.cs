@@ -16,11 +16,6 @@ public class Damage : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col) {
         Health healthScript = col.transform.gameObject.GetComponent<Health>();
 
-        if (healthScript.gameObject.name == "Player") {
-            healthScript.PlayerDamage(damageValue);
-        }
-        else {
-            healthScript.Damage(damageValue);
-        }
+        healthScript.Damage(damageValue);
     }
 }

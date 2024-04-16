@@ -1,4 +1,0 @@
-repository "Cassius Ascending@Mouyai@cloud"
-  path "/"
-    br "/main"
-    co "/main"
