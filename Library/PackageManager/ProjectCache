@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638461360219022010
-    m_Hash: 738577658
+      ticks: 638489071965770156
+    m_Hash: 4010510873
   m_LockFileStatus:
     m_FilePath: C:/Users/theHS/Desktop/Code/Unity/Cassius Ascending/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638461360219052013
-    m_Hash: 249320602
+      ticks: 638489071965780156
+    m_Hash: 2648962933
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -549,6 +549,7 @@ m_ResolvedPackages:
     - 5.2.2
     - 6.0.1-pre.1
     - 6.0.1-pre.2
+    - 6.0.1
     compatible:
     - 5.2.2
     recommended: 5.2.2
@@ -764,6 +765,7 @@ m_ResolvedPackages:
     - 1.4.1
     - 1.4.2
     - 1.4.3
+    - 1.4.4
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -783,6 +785,7 @@ m_ResolvedPackages:
     - 1.4.1
     - 1.4.2
     - 1.4.3
+    - 1.4.4
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -1312,10 +1315,12 @@ m_ResolvedPackages:
     - 1.9.0
     - 1.9.1
     - 1.9.2
+    - 1.9.4
     compatible:
     - 1.9.1
     - 1.9.2
-    recommended: 1.9.2
+    - 1.9.4
+    recommended: 1.9.4
     deprecated:
     - 1.8.0-pre.1
   dependencies:
@@ -4677,6 +4682,7 @@ m_ResolvedPackages:
     - 2.4.0-exp.2
     - 2.4.0-pre.2
     - 2.4.0-pre.5
+    - 2.4.0
     compatible:
     - 1.2.4
     - 1.3.1
@@ -4696,6 +4702,7 @@ m_ResolvedPackages:
     - 2.4.0-exp.2
     - 2.4.0-pre.2
     - 2.4.0-pre.5
+    - 2.4.0
     recommended: 1.2.4
     deprecated: []
   dependencies:

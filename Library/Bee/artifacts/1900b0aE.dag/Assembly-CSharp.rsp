@@ -379,11 +379,19 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/Scripts/Attack.cs"
+"Assets/Scripts/CollectCoins.cs"
 "Assets/Scripts/Damage.cs"
+"Assets/Scripts/EnemyMovement.cs"
+"Assets/Scripts/EnemySpawner.cs"
 "Assets/Scripts/GenerateTiles.cs"
 "Assets/Scripts/Health.cs"
 "Assets/Scripts/HudManager.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/projectile.cs"
+"Assets/Scripts/RangedEnemy.cs"
+"Assets/Scripts/SpawnManager.cs"
+"Assets/Scripts/WeaponParent.cs"
 -langversion:9.0
 
 /deterministic
