@@ -9,9 +9,10 @@ public class Health : MonoBehaviour
     // Public declarations
     public int maxHealth;
     public int currentHealth;
+    public float invulnSeconds = 0.5f;
 
     // Private declarations
-        // Put variables here if needed
+    private bool canTakeDamage = true;
 
     // Damage the gameObject by the damage amount. Handle death if we are below 0 health.
     public void Damage(int damageValue) {
@@ -20,6 +21,23 @@ public class Health : MonoBehaviour
         if(isDead()) {
             Death();
         }
+    }
+
+    public void PlayerDamage(int damageValue) {
+        if (canTakeDamage) {
+            Debug.Log(name + " took " + damageValue + " damage.");
+            currentHealth -= damageValue;
+            if(isDead()) {
+                Death();
+            }
+            StartCoroutine(Invulnerability());
+        }
+    }
+
+    IEnumerator Invulnerability() {
+        canTakeDamage = false;
+        yield return new WaitForSeconds(invulnSeconds);
+        canTakeDamage = true;
     }
 
     // Heal the gameObject by the heal amount. We don't want our current health to go above the max health though.

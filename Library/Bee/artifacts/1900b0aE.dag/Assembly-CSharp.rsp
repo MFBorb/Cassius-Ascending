@@ -382,6 +382,7 @@
 "Assets/Scripts/Damage.cs"
 "Assets/Scripts/GenerateTiles.cs"
 "Assets/Scripts/Health.cs"
+"Assets/Scripts/HudManager.cs"
 "Assets/Scripts/PlayerMovement.cs"
 -langversion:9.0
 
