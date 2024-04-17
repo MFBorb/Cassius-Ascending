@@ -25,6 +25,14 @@ public class PlayerMovement : MonoBehaviour
         // while GetAxis changes in steps of 0.05f.
         float verticalSpeed = Input.GetAxisRaw("Vertical");
         float horizontalSpeed = Input.GetAxisRaw("Horizontal");
+        if (horizontalSpeed > 0)
+        {
+            transform.localScale = new Vector3(-1.5f, 1.5f, 1f);
+        }
+        if (horizontalSpeed < 0)
+        {
+            transform.localScale = new Vector3(1.5f, 1.5f, 1f);
+        }
 
         // Normalize the speeds.
         // Since we only have vertical and horizontal, it is faster just to check if both
