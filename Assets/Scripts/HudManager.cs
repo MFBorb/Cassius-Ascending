@@ -9,6 +9,7 @@ public class HudManager : MonoBehaviour
     public Health playerHealth;
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI timerText;
+    public CollectCoins playerCoins;
 
     public float timer = 0.0f;
 
@@ -17,6 +18,7 @@ public class HudManager : MonoBehaviour
     {
         updateHealthBar();
         updateTimer(Time.deltaTime);
+        updateCoins();
     }
 
     void updateHealthBar() {
@@ -40,5 +42,11 @@ public class HudManager : MonoBehaviour
 
         timerString = string.Format("{0}:{1, 0:D2}", minutes, seconds % 60);
         timerText.text = timerString;
+    }
+    void updateCoins()
+    {
+        CollectCoins coinScript = playerCoins.GetComponent<CollectCoins>();
+        string coinScriptText = coinScript.coins.ToString();
+        coinText.text = coinScriptText;
     }
 }

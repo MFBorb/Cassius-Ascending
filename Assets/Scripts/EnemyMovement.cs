@@ -30,14 +30,13 @@ public class EnemyMovement : MonoBehaviour
             Instantiate(coinPrefab, transform.position, transform.rotation);
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter(Collision other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             Health healthScript = other.transform.gameObject.GetComponent<Health>();
 
             healthScript.Damage(damageValue);
-            Destroy(gameObject);
         }
     }
 }

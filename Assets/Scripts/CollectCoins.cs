@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CollectCoins : MonoBehaviour
 {
-    public float coins;
+    public int coins;
     // Start is called before the first frame update
     void Start()
     {
-        coins = 0f;
+        coins = 0;
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class CollectCoins : MonoBehaviour
         if (gameObject.tag == "Player" && other.tag == "Coin")
         {
             Destroy(other.gameObject);
-            coins += 1f;
+            coins += 1;
         }
     }
 }
