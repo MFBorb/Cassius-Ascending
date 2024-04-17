@@ -22,7 +22,7 @@ public class SpawnManager : MonoBehaviour
     }
     void SpawnObjects()
     {
-        Vector3 spawnLocation = new Vector3(10, Random.Range(3, 20), 0);
+        Vector3 spawnLocation = new Vector3(Random.Range(-7,7), Random.Range(-1, 0), 0);
         int index = Random.Range(0, enemyPrefabs.Length);
         Instantiate(enemyPrefabs[index], spawnLocation, enemyPrefabs[index].transform.rotation);
     }

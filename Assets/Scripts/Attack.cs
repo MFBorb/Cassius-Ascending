@@ -7,7 +7,7 @@ public class Attack : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private Animator anim;
     [SerializeField] private float meleeSpeed = 1;
-    [SerializeField] private float damage;
+    [SerializeField] private float enemyDamage;
     float timeUntilMelee = 1;
 
     void Start()
@@ -38,11 +38,11 @@ public class Attack : MonoBehaviour
     {
        if (other.tag == "Enemy1")
         {
-            other.GetComponent<EnemyMovement>().TakeDamage(damage);
+            other.GetComponent<EnemyMovement>().TakeDamage(enemyDamage);
         }
         if (other.tag == "Enemy2")
         {
-            other.GetComponent<RangedEnemy>().TakeDamage2(damage);
+            other.GetComponent<RangedEnemy>().TakeDamage2(enemyDamage);
         }
     }
 }
