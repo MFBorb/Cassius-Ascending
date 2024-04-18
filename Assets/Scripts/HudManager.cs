@@ -19,6 +19,10 @@ public class HudManager : MonoBehaviour
         updateHealthBar();
         updateTimer(Time.deltaTime);
         updateCoins();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            activateShop();
+        }
     }
 
     void updateHealthBar() {
@@ -49,4 +53,18 @@ public class HudManager : MonoBehaviour
         string coinScriptText = coinScript.coins.ToString();
         coinText.text = coinScriptText;
     }
+    void activateShop()
+    {
+        if (transform.GetChild(5).gameObject.activeSelf == false)
+        {
+            transform.GetChild(5).gameObject.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            transform.GetChild(5).gameObject.SetActive(false);
+            Time.timeScale = 1f;
+        }
+    }
+
 }
