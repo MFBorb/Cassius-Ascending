@@ -19,7 +19,10 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed);
+        if (Time.timeScale != 0)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed);
+        }
     }
     public void TakeDamage(float damage)
     {
