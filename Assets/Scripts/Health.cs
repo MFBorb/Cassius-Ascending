@@ -43,7 +43,7 @@ public class Health : MonoBehaviour
     // Heal the gameObject by the heal amount. We don't want our current health to go above the max health though.
     public void Heal(int healValue) {
         Debug.Log(name + " healed " + healValue + " health.");    // Will show the wrong value if currentHealth + healValue > maxHealth
-        currentHealth = Mathf.Max(currentHealth + healValue, maxHealth);
+        currentHealth = Mathf.Min(currentHealth + healValue, maxHealth);
     }
 
     // Increase the max health by the increase value. Could set a limit on max health.

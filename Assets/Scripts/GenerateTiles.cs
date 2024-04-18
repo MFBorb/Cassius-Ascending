@@ -143,7 +143,7 @@ public class GenerateTiles : MonoBehaviour
                 int tileX = i % 7;
                 int tileY = i / 7;
 
-                Instantiate(currentNode.prefab, new Vector3(parentX + tileX * xOffset, parentY + tileY * yOffset, parentZ), transform.rotation);
+                Instantiate(currentNode.prefab, new Vector3(parentX + tileX * xOffset, parentY + tileY * yOffset, parentZ), transform.rotation, this.transform);
             }
         }
     }

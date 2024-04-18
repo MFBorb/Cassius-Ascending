@@ -972,7 +972,9 @@ MonoBehaviour:
   maxEnemies: 12
   numEnemies: 0
   spawnDelay: 4
-  spawnInterval: 1
+  spawnInterval: 2
+  enemy1Weight: 0.6
+  enemy2Weight: 0.4
 --- !u!4 &466425460
 Transform:
   m_ObjectHideFlags: 0

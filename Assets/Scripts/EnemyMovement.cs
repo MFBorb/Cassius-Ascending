@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public GameObject target; //the enemy's target
-    public GameObject coinPrefab;
+    public GameObject[] dropOnDeathPrefabs;
     public float moveSpeed = .005f; //move speed
 	private Vector2 enemyMove;
     public int damageValue = 1;
@@ -34,7 +34,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Destroy(gameObject);
             enemySpawner.numEnemies--;
-            Instantiate(coinPrefab, transform.position, transform.rotation);
+            Instantiate(dropOnDeathPrefabs[Random.Range(0, dropOnDeathPrefabs.Length)], transform.position, transform.rotation);
         }
     }
     void OnCollisionEnter2D(Collision2D other)

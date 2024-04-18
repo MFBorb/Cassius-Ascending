@@ -10,6 +10,9 @@ public class SpawnManager : MonoBehaviour
     public float spawnDelay;
     public float spawnInterval;
 
+    public float enemy1Weight;
+    public float enemy2Weight;
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +29,18 @@ public class SpawnManager : MonoBehaviour
     void SpawnObjects()
     {
         if (numEnemies < maxEnemies) {
-            Vector3 spawnLocation = new Vector3(Random.Range(-7,7), Random.Range(-1, 0), 0);
-            int index = Random.Range(0, enemyPrefabs.Length);
+            Vector3 spawnLocation = new Vector3(Random.Range(-8,9), Random.Range(-4, 5), 0);
+            int index;
+            float randomWeight = Random.Range(0, 1);
 
-            Instantiate(enemyPrefabs[index], spawnLocation, enemyPrefabs[index].transform.rotation);
+            if (randomWeight <= enemy1Weight) {
+                index = 0;
+            }
+            else {
+                index = 1;
+            }
+
+            Instantiate(enemyPrefabs[index], spawnLocation, enemyPrefabs[index].transform.rotation, this.gameObject.transform);
             numEnemies++;
         }
     }

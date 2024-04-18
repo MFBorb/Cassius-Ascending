@@ -17,7 +17,6 @@ public class Damage : MonoBehaviour
         if (col.gameObject.name == "Player") {
             Health healthScript = col.transform.gameObject.GetComponent<Health>();
 
-
             healthScript.PlayerDamage(damageValue);
         }
     }
@@ -25,8 +24,6 @@ public class Damage : MonoBehaviour
     void OnTriggerStay2D(Collider2D col) {
         if (col.gameObject.name == "Player") {
             Health healthScript = col.transform.gameObject.GetComponent<Health>();
-
-            Debug.Log("Player took damage from On Trigger Stay");
             
             healthScript.PlayerDamage(damageValue);
         }
