@@ -36,7 +36,7 @@ public class projectile : MonoBehaviour
         {
             Health healthScript = other.transform.gameObject.GetComponent<Health>();
 
-            healthScript.Damage(damageValue);
+            healthScript.PlayerDamage(damageValue);
             Destroy(gameObject);
         }
     }

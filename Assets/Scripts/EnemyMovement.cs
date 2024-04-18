@@ -10,10 +10,13 @@ public class EnemyMovement : MonoBehaviour
 	private Vector2 enemyMove;
     public int damageValue = 1;
     [SerializeField] private float health;
+
+    private SpawnManager enemySpawner;
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.Find("Player");
+        enemySpawner = GameObject.Find("Enemies").GetComponent<SpawnManager>();
     }
 
     // Update is called once per frame
@@ -30,16 +33,27 @@ public class EnemyMovement : MonoBehaviour
         if (health <= 0f)
         {
             Destroy(gameObject);
+            enemySpawner.numEnemies--;
             Instantiate(coinPrefab, transform.position, transform.rotation);
         }
     }
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             Health healthScript = other.transform.gameObject.GetComponent<Health>();
 
-            healthScript.Damage(damageValue);
+            healthScript.PlayerDamage(damageValue);
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Health healthScript = other.transform.gameObject.GetComponent<Health>();
+
+            healthScript.PlayerDamage(damageValue);
         }
     }
 }
