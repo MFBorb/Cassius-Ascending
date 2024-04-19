@@ -31,7 +31,7 @@ public class SpawnManager : MonoBehaviour
         if (numEnemies < maxEnemies) {
             Vector3 spawnLocation = new Vector3(Random.Range(-8,9), Random.Range(-4, 5), 0);
             int index;
-            float randomWeight = Random.Range(0, 1);
+            float randomWeight = Random.Range(0.0f, 1.0f);
 
             if (randomWeight <= enemy1Weight) {
                 index = 0;
