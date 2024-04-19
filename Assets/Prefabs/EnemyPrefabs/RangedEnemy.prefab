@@ -175,9 +175,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3354889334480790833, guid: c0435abe4a1bf7745b47c64d9625b62e, type: 3}
   coinPrefab: {fileID: 3495774790238886689, guid: 32cf37ffd257a2c48a17bef3f47020c1, type: 3}
   moveSpeed: 0.005
-  health: 60
+  health: 40
   distanceToShoot: 8
-  distanceToStop: 5
+  distanceToStop: 4
   rotateSpeed: 1
-  fireRate: 2
+  fireRate: 3
   firingPoint: {fileID: 0}

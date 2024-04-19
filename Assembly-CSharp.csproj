@@ -59,9 +59,9 @@
     <Compile Include="Assets\Scripts\Damage.cs" />
     <Compile Include="Assets\Scripts\ButtonInfo.cs" />
     <Compile Include="Assets\Scripts\RangedEnemy.cs" />
-    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\projectile.cs" />
+    <Compile Include="Assets\Scripts\HealthPickup.cs" />
     <Compile Include="Assets\Scripts\GenerateTiles.cs" />
     <Compile Include="Assets\Scripts\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\CollectCoins.cs" />
@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\EnterShop.cs" />
     <Compile Include="Assets\Scripts\Store.cs" />
     <Compile Include="Assets\Scripts\Attack.cs" />
+    <Compile Include="Assets\Scripts\ItemChanges.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
