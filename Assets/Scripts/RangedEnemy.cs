@@ -17,11 +17,14 @@ public class RangedEnemy : MonoBehaviour
     public float fireRate;
     private float timeToFire;
     public Transform firingPoint;
+
+     private SpawnManager enemySpawner;
     // Start is called before the first frame update
     void Start()
     {
         timeToFire = fireRate;
         target = GameObject.Find("Player");
+        enemySpawner = GameObject.Find("Enemies").GetComponent<SpawnManager>();
         //projectilePrefab = GameObject.Find("projectilePrefab");
     }
 
@@ -59,6 +62,7 @@ public class RangedEnemy : MonoBehaviour
         {
             Instantiate(coinPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
+            enemySpawner.numEnemies--;
         }
     }
     private void RotateTowardsTarget()
