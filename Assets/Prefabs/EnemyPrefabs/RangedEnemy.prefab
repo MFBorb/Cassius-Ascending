@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7460707387844551668}
   - component: {fileID: 2386504053219732488}
   - component: {fileID: 7070593967644573876}
+  - component: {fileID: 5918702766583207044}
   m_Layer: 0
   m_Name: RangedEnemy
   m_TagString: Enemy2
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7420587922101351056}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.63, y: 6.09, z: 0.06756188}
   m_LocalScale: {x: 1, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
@@ -181,3 +182,24 @@ MonoBehaviour:
   rotateSpeed: 1
   fireRate: 3
   firingPoint: {fileID: 0}
+--- !u!95 &5918702766583207044
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7420587922101351056}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb9faacb376eb4707816ba16ca7ce57e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
