@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
 	private Vector2 enemyMove;
     public int damageValue = 1;
     [SerializeField] private float health;
+    private Animator anim;
 
     private SpawnManager enemySpawner;
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class EnemyMovement : MonoBehaviour
     {
         target = GameObject.Find("Player");
         enemySpawner = GameObject.Find("Enemies").GetComponent<SpawnManager>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,15 @@ public class EnemyMovement : MonoBehaviour
         if (Time.timeScale != 0)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed);
+        }
+
+        if (transform.position.x < target.transform.position.x)
+        {
+            transform.localScale = new Vector3(-1.5f, 1.5f, 1f);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1.5f, 1.5f, 1f);
         }
     }
     public void TakeDamage(float damage)

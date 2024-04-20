@@ -47,12 +47,11 @@ public class RangedEnemy : MonoBehaviour
     }
     private void Shoot()
     {
-        // trigger About to fire animation
+        // trigger about to fire animation
         if (timeToFire > 0f && timeToFire <= 1f)
         {
             anim.SetTrigger("Fire");
             timeToFireAnimation = fireRate;
-            Debug.Log("Fire");
         }
         else
         {
