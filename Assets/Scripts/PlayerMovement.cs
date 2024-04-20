@@ -12,6 +12,13 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
 
         // Private
+        private Animator anim;
+        private bool isMoving;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -37,10 +44,23 @@ public class PlayerMovement : MonoBehaviour
         // Normalize the speeds.
         // Since we only have vertical and horizontal, it is faster just to check if both
         // of them are not 0.
-        if (!(verticalSpeed == 0 && verticalSpeed == 0)) {
+        if (!(verticalSpeed == 0 && verticalSpeed == 0)) 
+        {
             verticalSpeed *= NORMALIZED_SPEED;
             horizontalSpeed *= NORMALIZED_SPEED;
         }
+
+        if (verticalSpeed == 0 && horizontalSpeed == 0)
+        {
+            isMoving = false;
+        } 
+        else
+        {
+            isMoving = true;
+        }
+        anim.SetBool("isMoving", isMoving);
+
+
 
         // Shrink it so that we move "speed" units in 1 second
         verticalSpeed *= speed * Time.deltaTime;

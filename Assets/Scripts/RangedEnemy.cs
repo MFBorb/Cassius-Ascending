@@ -16,7 +16,9 @@ public class RangedEnemy : MonoBehaviour
     public float rotateSpeed;
     public float fireRate;
     private float timeToFire;
+    private float timeToFireAnimation;
     public Transform firingPoint;
+    private Animator anim;
 
      private SpawnManager enemySpawner;
     // Start is called before the first frame update
@@ -26,6 +28,7 @@ public class RangedEnemy : MonoBehaviour
         target = GameObject.Find("Player");
         enemySpawner = GameObject.Find("Enemies").GetComponent<SpawnManager>();
         //projectilePrefab = GameObject.Find("projectilePrefab");
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,12 +42,24 @@ public class RangedEnemy : MonoBehaviour
         }
         if (Vector2.Distance(target.transform.position, transform.position) <= distanceToShoot)
         {
-         
             Shoot();
         }
     }
     private void Shoot()
     {
+        // trigger About to fire animation
+        if (timeToFire > 0f && timeToFire <= 1f)
+        {
+            anim.SetTrigger("Fire");
+            timeToFireAnimation = fireRate;
+            Debug.Log("Fire");
+        }
+        else
+        {
+            timeToFireAnimation -= Time.deltaTime;
+        }
+
+        // Fire Attack
         if (timeToFire <= 0f)
         {
             Instantiate(projectilePrefab, transform.position, transform.rotation);
@@ -52,7 +67,9 @@ public class RangedEnemy : MonoBehaviour
         }
         else
         {
+            timeToFireAnimation -= Time.deltaTime;
             timeToFire -= Time.deltaTime;
+            
         }
     }
     public void TakeDamage2(float damage)
