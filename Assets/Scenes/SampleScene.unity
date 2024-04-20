@@ -969,12 +969,14 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 4945652224940175135, guid: 7a77a65bf18884748ad8aab48fde5f2e, type: 3}
   - {fileID: 7420587922101351056, guid: 392cd66813ba7434ea7e9d9ab9c02fd3, type: 3}
+  bossPrefab: {fileID: 4945652224940175135, guid: a41b9e9703f23234fa5adb8e986390df, type: 3}
   maxEnemies: 12
   numEnemies: 0
   spawnDelay: 4
   spawnInterval: 1.5
   enemy1Weight: 0.6
   enemy2Weight: 0.4
+  timer: {fileID: 1849582607}
 --- !u!4 &466425460
 Transform:
   m_ObjectHideFlags: 0
@@ -1986,6 +1988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPrefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1625554914566544863, guid: a35b5be85228e394daac3c339451ea21, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2644230004594662939, guid: a35b5be85228e394daac3c339451ea21, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2504
@@ -2994,6 +3000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1625554914566544863, guid: a35b5be85228e394daac3c339451ea21, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2644230004594662939, guid: a35b5be85228e394daac3c339451ea21, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2504
@@ -3193,6 +3203,10 @@ PrefabInstance:
     - target: {fileID: 1625554914566544863, guid: a35b5be85228e394daac3c339451ea21, type: 3}
       propertyPath: m_Name
       value: WallPrefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625554914566544863, guid: a35b5be85228e394daac3c339451ea21, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2644230004594662939, guid: a35b5be85228e394daac3c339451ea21, type: 3}
       propertyPath: m_LocalScale.x
@@ -4027,6 +4041,10 @@ PrefabInstance:
     - target: {fileID: 1625554914566544863, guid: a35b5be85228e394daac3c339451ea21, type: 3}
       propertyPath: m_Name
       value: WallPrefab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625554914566544863, guid: a35b5be85228e394daac3c339451ea21, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2644230004594662939, guid: a35b5be85228e394daac3c339451ea21, type: 3}
       propertyPath: m_LocalScale.x
