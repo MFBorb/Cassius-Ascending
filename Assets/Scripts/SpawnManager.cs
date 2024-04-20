@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
+    public GameObject bossPrefab;
     public int maxEnemies;
     public int numEnemies = 0;
     public float spawnDelay;
@@ -12,6 +13,8 @@ public class SpawnManager : MonoBehaviour
 
     public float enemy1Weight;
     public float enemy2Weight;
+
+    public HudManager timer;
 
 
     // Start is called before the first frame update
@@ -21,14 +24,9 @@ public class SpawnManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void SpawnObjects()
     {
-        if (numEnemies < maxEnemies) {
+        if (numEnemies < maxEnemies && timer.timer <= 60.0f) {
             Vector3 spawnLocation = new Vector3(Random.Range(-8,9), Random.Range(-4, 5), 0);
             int index;
             float randomWeight = Random.Range(0.0f, 1.0f);
@@ -42,6 +40,10 @@ public class SpawnManager : MonoBehaviour
 
             Instantiate(enemyPrefabs[index], spawnLocation, enemyPrefabs[index].transform.rotation, this.gameObject.transform);
             numEnemies++;
+        }
+        else if (timer.timer >= 60.0f) {
+            Instantiate(bossPrefab, new Vector3(0, 0, 0), transform.rotation, this.gameObject.transform);
+            CancelInvoke();
         }
     }
 }
