@@ -621,7 +621,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1663716661
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -869870316, guid: efec65eb4a3314b008c2438f569c51a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3858,6 +3858,7 @@ MonoBehaviour:
   player: {fileID: 154887051}
   tileManager: {fileID: 1675092720}
   enemyManager: {fileID: 466425458}
+  timer: {fileID: 1849582607}
   wave: 0
 --- !u!4 &1704183013
 Transform:

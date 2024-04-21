@@ -48,6 +48,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Enemy
+    uniqueID: 2264025403
+    locked: 0
   - name: Sprite
     uniqueID: 2631250635
     locked: 0

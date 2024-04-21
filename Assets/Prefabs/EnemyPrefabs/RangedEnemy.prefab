@@ -146,11 +146,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2030941893
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 744425562, guid: b7e27c5963d3746cba181f51d6b6e0e7, type: 3}
-  m_Color: {r: 0, g: 0.04511404, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -174,7 +174,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   projectilePrefab: {fileID: 3354889334480790833, guid: c0435abe4a1bf7745b47c64d9625b62e, type: 3}
-  coinPrefab: {fileID: 3495774790238886689, guid: 32cf37ffd257a2c48a17bef3f47020c1, type: 3}
+  dropOnDeathPrefabs:
+  - {fileID: 3495774790238886689, guid: 32cf37ffd257a2c48a17bef3f47020c1, type: 3}
+  - {fileID: 7864953921323361144, guid: c4973dbf6035aa444b0bf1c9f74439b3, type: 3}
   moveSpeed: 0.005
   health: 40
   distanceToShoot: 8
