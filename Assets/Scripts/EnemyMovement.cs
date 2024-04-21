@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public GameObject target; //the enemy's target
+    private GameObject target; //the enemy's target
     public GameObject[] dropOnDeathPrefabs;
     public float moveSpeed = .005f; //move speed
 	private Vector2 enemyMove;

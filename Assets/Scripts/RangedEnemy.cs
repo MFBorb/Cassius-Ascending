@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RangedEnemy : MonoBehaviour
 {
-    public GameObject target; //the enemy's target
+    private GameObject target; //the enemy's target
     public GameObject projectilePrefab;
     public GameObject coinPrefab;
     public float moveSpeed = .005f; //move speed
