@@ -10,7 +10,6 @@ public class GameOverScreen : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    // TODO
     public void TryAgainButton()
     {
         SceneManager.LoadScene("SampleScene");

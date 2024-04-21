@@ -39,7 +39,6 @@ public class HudManager : MonoBehaviour
 
         if (playerHealth.currentHealth <= 0)
         {
-            Debug.Log("Game Over is called");
             gameOverScreen.GameOver();
         }
     }
