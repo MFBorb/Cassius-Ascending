@@ -276,6 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 74195920}
   - component: {fileID: 74195921}
+  - component: {fileID: 74195922}
   m_Layer: 5
   m_Name: Capsule
   m_TagString: Untagged
@@ -342,7 +343,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
   m_FlipX: 0
@@ -354,6 +355,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &74195922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74195919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc30b1b98a66384680259065a1fe5d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSprites:
+  - {fileID: 5871335685693021358, guid: 380e786037edf3f48a11e75a186d4d4f, type: 3}
+  - {fileID: 6111081019810224179, guid: 401b955b3643a7143a6d7109447d2902, type: 3}
+  - {fileID: 2669335794024688937, guid: 8f8133c6363f6d642bf982f58bb2b3e5, type: 3}
+  - {fileID: 4540493773929016096, guid: cf25f5e2b8941264ca4dde0932b39150, type: 3}
+  - {fileID: 3306437961079204126, guid: 777235f76bc4e2845b066192c53b51f6, type: 3}
+  - {fileID: 4257207105347740526, guid: bcdde4b9c0832d04e97fa916c2f68e48, type: 3}
+  item: {fileID: 831446574}
 --- !u!1 &89295445
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +430,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemID: 1
+  itemPrefabs:
+  - {fileID: 5871335685693021358, guid: 380e786037edf3f48a11e75a186d4d4f, type: 3}
+  - {fileID: 6111081019810224179, guid: 401b955b3643a7143a6d7109447d2902, type: 3}
+  - {fileID: 2669335794024688937, guid: 8f8133c6363f6d642bf982f58bb2b3e5, type: 3}
+  - {fileID: 4540493773929016096, guid: cf25f5e2b8941264ca4dde0932b39150, type: 3}
+  - {fileID: 3306437961079204126, guid: 777235f76bc4e2845b066192c53b51f6, type: 3}
+  - {fileID: 4257207105347740526, guid: bcdde4b9c0832d04e97fa916c2f68e48, type: 3}
   PriceText: {fileID: 1114264474}
   QuantityText: {fileID: 628062065}
   ShopManager: {fileID: 746522843}
@@ -459,6 +487,18 @@ MonoBehaviour:
       - m_Target: {fileID: 746522844}
         m_TargetAssemblyTypeName: Store, Assembly-CSharp
         m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11500000, guid: 74e757701af0b964384c1b53950ab4ee, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1464,7 +1504,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 154887051}
+  playerDamage: {fileID: 0}
+  moveSpeed: {fileID: 0}
+  iron: 0
+  chlorine: 0
+  hydrogen: 0
+  oxygen: 0
+  copper: 0
+  carbon: 0
+  i: 0
 --- !u!4 &678000588
 Transform:
   m_ObjectHideFlags: 0
@@ -1509,8 +1558,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a118cde611093f84897efabcfef28a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemPrefabs: []
   playerCoins: {fileID: 154887059}
   coinScriptText: 
+  boughtItem: {fileID: 0}
 --- !u!4 &746522845
 Transform:
   m_ObjectHideFlags: 0
@@ -1706,6 +1757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemID: 3
+  itemPrefabs: []
   PriceText: {fileID: 1057736849}
   QuantityText: {fileID: 425061110}
   ShopManager: {fileID: 746522843}
@@ -1933,6 +1985,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemID: 2
+  itemPrefabs:
+  - {fileID: 5871335685693021358, guid: 380e786037edf3f48a11e75a186d4d4f, type: 3}
+  - {fileID: 6111081019810224179, guid: 401b955b3643a7143a6d7109447d2902, type: 3}
+  - {fileID: 2669335794024688937, guid: 8f8133c6363f6d642bf982f58bb2b3e5, type: 3}
+  - {fileID: 4540493773929016096, guid: cf25f5e2b8941264ca4dde0932b39150, type: 3}
+  - {fileID: 3306437961079204126, guid: 777235f76bc4e2845b066192c53b51f6, type: 3}
+  - {fileID: 4257207105347740526, guid: bcdde4b9c0832d04e97fa916c2f68e48, type: 3}
   PriceText: {fileID: 1400279690}
   QuantityText: {fileID: 844655614}
   ShopManager: {fileID: 746522843}
@@ -3401,6 +3460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1419374988}
   - component: {fileID: 1419374989}
+  - component: {fileID: 1419374990}
   m_Layer: 5
   m_Name: Capsule
   m_TagString: Untagged
@@ -3467,7 +3527,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
   m_FlipX: 0
@@ -3479,6 +3539,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1419374990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419374987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc30b1b98a66384680259065a1fe5d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSprites:
+  - {fileID: 5871335685693021358, guid: 380e786037edf3f48a11e75a186d4d4f, type: 3}
+  - {fileID: 6111081019810224179, guid: 401b955b3643a7143a6d7109447d2902, type: 3}
+  - {fileID: 2669335794024688937, guid: 8f8133c6363f6d642bf982f58bb2b3e5, type: 3}
+  - {fileID: 4540493773929016096, guid: cf25f5e2b8941264ca4dde0932b39150, type: 3}
+  - {fileID: 3306437961079204126, guid: 777235f76bc4e2845b066192c53b51f6, type: 3}
+  - {fileID: 4257207105347740526, guid: bcdde4b9c0832d04e97fa916c2f68e48, type: 3}
+  item: {fileID: 89295445}
 --- !u!1001 &1421863749
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.EventSystems;
 
 public class HudManager : MonoBehaviour
 {
@@ -72,6 +73,7 @@ public class HudManager : MonoBehaviour
             transform.GetChild(5).gameObject.SetActive(false);
             Time.timeScale = 1f;
         }
+        
     }
 
 }

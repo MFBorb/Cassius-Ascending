@@ -11,6 +11,12 @@ TagManager:
   - Event
   - Projectile
   - Pickup
+  - iron
+  - chorine
+  - hydrogen
+  - oxygen
+  - copper
+  - carbon
   layers:
   - Default
   - TransparentFX

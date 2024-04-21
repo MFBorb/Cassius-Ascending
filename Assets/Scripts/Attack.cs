@@ -6,8 +6,8 @@ public class Attack : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private Animator anim;
-    [SerializeField] private float meleeSpeed = 1;
-    [SerializeField] private float enemyDamage;
+    [SerializeField] public float meleeSpeed = 1;
+    [SerializeField] public float enemyDamage;
     float timeUntilMelee = 1;
 
     void Start()
