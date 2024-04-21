@@ -391,6 +391,7 @@
 "Assets/Scripts/HealthPickup.cs"
 "Assets/Scripts/HudManager.cs"
 "Assets/Scripts/ItemChanges.cs"
+"Assets/Scripts/MoveToNextLevel.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/projectile.cs"
 "Assets/Scripts/RangedEnemy.cs"

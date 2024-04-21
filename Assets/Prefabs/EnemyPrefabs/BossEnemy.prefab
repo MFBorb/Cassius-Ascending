@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 4945652224940175135}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.15, y: -0.03, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2030941893
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2104614472, guid: 0cc1ef0a4f31144e28c4be8f21d04a93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -132,9 +132,9 @@ MonoBehaviour:
   dropOnDeathPrefabs:
   - {fileID: 3495774790238886689, guid: 32cf37ffd257a2c48a17bef3f47020c1, type: 3}
   - {fileID: 7864953921323361144, guid: c4973dbf6035aa444b0bf1c9f74439b3, type: 3}
-  moveSpeed: 0.0025
-  damageValue: 1
-  health: 100
+  moveSpeed: 0.00125
+  damageValue: 2
+  health: 200
 --- !u!61 &6243208300481413342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -213,3 +213,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35592b3501135c4ba1b23b7ca976f3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 7893752903912157065, guid: 9de8ac48f27f9ec47948ac889fee9cb8, type: 3}

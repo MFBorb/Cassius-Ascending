@@ -6,7 +6,7 @@ public class RangedEnemy : MonoBehaviour
 {
     public GameObject target; //the enemy's target
     public GameObject projectilePrefab;
-    public GameObject coinPrefab;
+    public GameObject[] dropOnDeathPrefabs;
     public float moveSpeed = .005f; //move speed
 	private Vector2 enemyMove;
     [SerializeField] private float health;
@@ -61,7 +61,8 @@ public class RangedEnemy : MonoBehaviour
         // Fire Attack
         if (timeToFire <= 0f)
         {
-            Instantiate(projectilePrefab, transform.position, transform.rotation);
+            GameObject projectileClone = Instantiate(projectilePrefab, transform.position, transform.rotation);
+
             timeToFire = fireRate;
         }
         else
@@ -76,7 +77,9 @@ public class RangedEnemy : MonoBehaviour
         health -= damage;
         if (health <= 0f)
         {
-            Instantiate(coinPrefab, transform.position, transform.rotation);
+            GameObject pickupPrefab = dropOnDeathPrefabs[Random.Range(0, dropOnDeathPrefabs.Length)];
+            Instantiate(pickupPrefab, transform.position, pickupPrefab.transform.rotation);
+            
             Destroy(gameObject);
             enemySpawner.numEnemies--;
         }

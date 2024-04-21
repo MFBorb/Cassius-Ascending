@@ -41,7 +41,7 @@ public class SpawnManager : MonoBehaviour
             numEnemies++;
         }
         else if (timer.timer >= 60.0f) {
-            Instantiate(bossPrefab, new Vector3(0, 0, 0), transform.rotation, this.gameObject.transform);
+            Instantiate(bossPrefab, new Vector3(0, 0, 0), bossPrefab.transform.rotation, this.gameObject.transform);
             CancelInvoke();
         }
     }
