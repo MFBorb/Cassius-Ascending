@@ -16,15 +16,14 @@ public class SpawnManager : MonoBehaviour
 
     public HudManager timer;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void StartSpawning(float newSpawnInterval)
     {
+        spawnInterval = newSpawnInterval;
         InvokeRepeating("SpawnObjects", spawnDelay, spawnInterval);
 
     }
 
-    void SpawnObjects()
+    private void SpawnObjects()
     {
         if (numEnemies < maxEnemies && timer.timer <= 60.0f) {
             Vector3 spawnLocation = new Vector3(Random.Range(-8,9), Random.Range(-4, 5), 0);

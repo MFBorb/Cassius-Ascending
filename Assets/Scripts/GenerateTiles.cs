@@ -40,11 +40,12 @@ public class GenerateTiles : MonoBehaviour
 
     // Private variables
     // Create an array that stores a node for each tile we will have (7x4 grid)
-    private node[] tileArray = new node[28];
+    private node[] tileArray;
 
     // Start is called before the first frame update
-    void Start()
-    { 
+    public void StartTileGeneration()
+    {
+        tileArray = new node[28];
         initializeWeights();
         initializeStartNode();
         generateRandomTiles();

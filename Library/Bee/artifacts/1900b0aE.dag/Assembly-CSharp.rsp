@@ -396,6 +396,7 @@
 "Assets/Scripts/RangedEnemy.cs"
 "Assets/Scripts/SpawnManager.cs"
 "Assets/Scripts/Store.cs"
+"Assets/Scripts/WaveManager.cs"
 "Assets/Scripts/WeaponParent.cs"
 -langversion:9.0
 

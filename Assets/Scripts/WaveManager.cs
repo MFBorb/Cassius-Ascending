@@ -1,0 +1,73 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WaveManager : MonoBehaviour
+{
+    public GameObject player;
+    public GameObject tileManager;
+    public GameObject enemyManager;
+    public int wave = 0;
+
+
+    void Start() {
+        SetupNextWave();
+    }
+
+    public void SetupNextWave() {
+        wave++;
+        DestroyPickups();
+        DestroyProjectiles();
+        DestroyEnemies();
+        DestroyTiles();
+        ResetPlayer();
+
+        StartEnemies();
+        StartTiles();
+    }
+
+    private void DestroyPickups() {
+        GameObject[] pickupArray = GameObject.FindGameObjectsWithTag("Pickup");
+
+        foreach (GameObject pickup in pickupArray) {
+            Destroy(pickup);
+        }
+    }
+
+    private void DestroyProjectiles() {
+        GameObject[] projectileArray = GameObject.FindGameObjectsWithTag("Projectile");
+
+        foreach (GameObject projectile in projectileArray) {
+            Destroy(projectile);
+        }
+    }
+
+    private void DestroyEnemies() {
+        foreach (Transform child in enemyManager.transform) {
+            Destroy(child.gameObject);
+        }
+    }
+
+    private void DestroyTiles() {
+        foreach(Transform child in tileManager.transform) {
+            Destroy(child.gameObject);
+        }
+    }
+
+    private void ResetPlayer() {
+
+    }
+
+    private void StartEnemies() {
+        SpawnManager spawnManager = enemyManager.GetComponent<SpawnManager>();
+        spawnManager.maxEnemies = 10 + 2 * wave;
+
+        spawnManager.StartSpawning(1.55f - ((float) wave) / 9.0f);
+    }
+
+    private void StartTiles() {
+        GenerateTiles tileGen = tileManager.GetComponent<GenerateTiles>();
+
+        tileGen.StartTileGeneration();
+    }
+}
