@@ -18,7 +18,7 @@ public class CollectCoins : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (gameObject.tag == "Player" && other.tag == "Coin")
+        if (gameObject.tag == "Player" && other.gameObject.name == "Coin(Clone)")
         {
             Destroy(other.gameObject);
             coins += 1;
