@@ -11,6 +11,7 @@ public class Store : MonoBehaviour
     public CollectCoins playerCoins;
     public string coinScriptText;
     public ItemChanges boughtItem;
+    public int i = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -50,16 +51,19 @@ public class Store : MonoBehaviour
     
     public void Buy()
     {
+        
         CollectCoins coinScript = playerCoins.GetComponent<CollectCoins>();
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
         ButtonRef.GetComponent<ButtonInfo>().ItemID = Random.Range(1, 6);
         
         if (coinScript.coins >= shopItems[2,ButtonRef.GetComponent<ButtonInfo>().ItemID])
         {
+            boughtItem.GetComponent<ItemChanges>().heldItems[i] = itemPrefabs[ButtonRef.GetComponent<ButtonInfo>().ItemID];
             boughtItem.GetComponent<ItemChanges>().checkItem();
             coinScript.coins -= shopItems[2,ButtonRef.GetComponent<ButtonInfo>().ItemID];
             shopItems[3,ButtonRef.GetComponent<ButtonInfo>().ItemID]++;
             ButtonRef.GetComponent<ButtonInfo>().QuantityText.text = shopItems[3,ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();
+            i++;
         }
     }
 }

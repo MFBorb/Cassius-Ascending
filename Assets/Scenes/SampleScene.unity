@@ -1558,10 +1558,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a118cde611093f84897efabcfef28a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefabs: []
+  itemPrefabs:
+  - {fileID: 5871335685693021358, guid: 380e786037edf3f48a11e75a186d4d4f, type: 3}
+  - {fileID: 6111081019810224179, guid: 401b955b3643a7143a6d7109447d2902, type: 3}
+  - {fileID: 2669335794024688937, guid: 8f8133c6363f6d642bf982f58bb2b3e5, type: 3}
+  - {fileID: 4540493773929016096, guid: cf25f5e2b8941264ca4dde0932b39150, type: 3}
+  - {fileID: 3306437961079204126, guid: 777235f76bc4e2845b066192c53b51f6, type: 3}
+  - {fileID: 4257207105347740526, guid: bcdde4b9c0832d04e97fa916c2f68e48, type: 3}
   playerCoins: {fileID: 154887059}
   coinScriptText: 
-  boughtItem: {fileID: 0}
+  boughtItem: {fileID: 678000587}
+  i: 0
 --- !u!4 &746522845
 Transform:
   m_ObjectHideFlags: 0
