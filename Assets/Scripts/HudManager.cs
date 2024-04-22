@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEngine.EventSystems;
 
 public class HudManager : MonoBehaviour
 {
@@ -12,7 +10,6 @@ public class HudManager : MonoBehaviour
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI timerText;
     public CollectCoins playerCoins;
-    public GameOverScreen gameOverScreen;
 
     public float timer = 0.0f;
 
@@ -36,11 +33,6 @@ public class HudManager : MonoBehaviour
             else {
                 heartArray[i].SetActive(false);
             }
-        }
-
-        if (playerHealth.currentHealth <= 0)
-        {
-            gameOverScreen.GameOver();
         }
     }
 
@@ -73,7 +65,6 @@ public class HudManager : MonoBehaviour
             transform.GetChild(5).gameObject.SetActive(false);
             Time.timeScale = 1f;
         }
-        
     }
 
 }
