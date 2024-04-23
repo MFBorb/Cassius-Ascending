@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    public List<Item> items;
+    public List<Item> items = new List<Item>();
+    public GameObject sparkPrefab;
 
     public void ActivateOnHitEffects(GameObject obj) {
         foreach (Item item in items) {

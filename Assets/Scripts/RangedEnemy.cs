@@ -74,6 +74,7 @@ public class RangedEnemy : MonoBehaviour
     }
     public void TakeDamage2(float damage)
     {
+        if (health <= 0f) { return; };
         health -= damage;
         if (health <= 0f)
         {

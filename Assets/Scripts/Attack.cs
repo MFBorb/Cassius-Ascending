@@ -8,6 +8,7 @@ public class Attack : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] public float meleeSpeed = 1;
     [SerializeField] public float enemyDamage;
+    public ItemManager itemManager;
     float timeUntilMelee = 1;
     public AudioSource audioMelee;
 
@@ -33,6 +34,10 @@ public class Attack : MonoBehaviour
         {
             timeUntilMelee -= Time.deltaTime;
         }
+
+        if (Input.GetMouseButtonDown(1)) {
+            itemManager.ActivateOnActivationEffects();
+        }
         
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -40,10 +45,12 @@ public class Attack : MonoBehaviour
        if (other.tag == "Enemy1")
         {
             other.GetComponent<EnemyMovement>().TakeDamage(enemyDamage);
+            itemManager.ActivateOnHitEffects(other.gameObject);
         }
         if (other.tag == "Enemy2")
         {
             other.GetComponent<RangedEnemy>().TakeDamage2(enemyDamage);
+            itemManager.ActivateOnHitEffects(other.gameObject);
         }
     }
 }

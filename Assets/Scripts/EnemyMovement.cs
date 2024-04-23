@@ -42,6 +42,8 @@ public class EnemyMovement : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        // Do not remove this. Weird bug with items causing multiple death triggers.
+        if (health <= 0f) { return; };
         health -= damage;
         if (health <= 0f)
         {
