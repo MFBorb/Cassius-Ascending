@@ -407,6 +407,7 @@
 "Assets/Scripts/TitleScreen.cs"
 "Assets/Scripts/WaveManager.cs"
 "Assets/Scripts/WeaponParent.cs"
+"Assets/Scripts/WinScreen.cs"
 -langversion:9.0
 
 /deterministic

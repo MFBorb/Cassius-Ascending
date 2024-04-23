@@ -17,6 +17,12 @@ public class WaveManager : MonoBehaviour
 
     public void SetupNextWave() {
         wave++;
+
+        if (wave == 10) {
+            timer.ActivateWin();
+            return;
+        }
+        
         DestroyPickups();
         DestroyProjectiles();
         DestroyEnemies();

@@ -13,6 +13,7 @@ public class HudManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public CollectCoins playerCoins;
     public GameOverScreen gameOverScreen;
+    public WinScreen winScreen;
     public int wave = 0;
 
     public float timer = 0.0f;
@@ -77,6 +78,11 @@ public class HudManager : MonoBehaviour
             Time.timeScale = 1f;
         }
         
+    }
+
+    public void ActivateWin() {
+        playerHealth.gameObject.SetActive(false);
+        winScreen.YouWin();
     }
 
 }
