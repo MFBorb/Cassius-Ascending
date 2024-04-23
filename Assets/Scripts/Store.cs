@@ -63,6 +63,7 @@ public class Store : MonoBehaviour
             coinScript.coins -= shopItems[2,ButtonRef.GetComponent<ButtonInfo>().ItemID];
             shopItems[3,ButtonRef.GetComponent<ButtonInfo>().ItemID]++;
             ButtonRef.GetComponent<ButtonInfo>().QuantityText.text = shopItems[3,ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();
+            ButtonRef.GetComponent<ButtonInfo>().ItemID = Random.Range(1, 6);
             i++;
         }
     }

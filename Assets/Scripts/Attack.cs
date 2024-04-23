@@ -9,10 +9,11 @@ public class Attack : MonoBehaviour
     [SerializeField] public float meleeSpeed = 1;
     [SerializeField] public float enemyDamage;
     float timeUntilMelee = 1;
+    public AudioSource audioMelee;
 
     void Start()
     {
-        
+       audioMelee = GetComponent<AudioSource>(); 
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class Attack : MonoBehaviour
                 
                 anim.SetTrigger("Attack");
                 timeUntilMelee = meleeSpeed;
-                
+                audioMelee.Play();
             }
         }
         else

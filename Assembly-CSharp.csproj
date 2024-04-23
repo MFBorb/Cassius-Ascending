@@ -56,9 +56,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\WeaponParent.cs" />
+    <Compile Include="Assets\Scripts\CreditsScreen.cs" />
     <Compile Include="Assets\Scripts\ChangeSprite.cs" />
     <Compile Include="Assets\Scripts\Damage.cs" />
     <Compile Include="Assets\Scripts\ButtonInfo.cs" />
+    <Compile Include="Assets\Scripts\TitleScreen.cs" />
     <Compile Include="Assets\Scripts\RangedEnemy.cs" />
     <Compile Include="Assets\Scripts\BossEnemy.cs" />
     <Compile Include="Assets\Scripts\GameOverScreen.cs" />
@@ -74,6 +76,8 @@
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\EnterShop.cs" />
     <Compile Include="Assets\Scripts\Store.cs" />
+    <Compile Include="Assets\Scripts\ItemManager.cs" />
+    <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\Attack.cs" />
     <Compile Include="Assets\Scripts\ItemChanges.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />

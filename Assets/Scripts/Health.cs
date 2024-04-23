@@ -13,6 +13,13 @@ public class Health : MonoBehaviour
 
     // Private declarations
     private bool canTakeDamage = true;
+    public AudioSource audioDamage;
+    public AudioSource audioHeal;
+    void start()
+    {
+        audioDamage = GetComponent<AudioSource>();
+        audioHeal = GetComponent<AudioSource>();
+    }
 
     // Damage the gameObject by the damage amount. Handle death if we are below 0 health.
     public void Damage(int damageValue) {
@@ -26,6 +33,7 @@ public class Health : MonoBehaviour
     public void PlayerDamage(int damageValue) {
         if (canTakeDamage) {
             Debug.Log(name + " took " + damageValue + " damage.");
+            audioDamage.Play();
             currentHealth -= damageValue;
             if(isDead()) {
                 Death();
@@ -43,6 +51,7 @@ public class Health : MonoBehaviour
     // Heal the gameObject by the heal amount. We don't want our current health to go above the max health though.
     public void Heal(int healValue) {
         Debug.Log(name + " healed " + healValue + " health.");    // Will show the wrong value if currentHealth + healValue > maxHealth
+        audioHeal.Play();
         currentHealth = Mathf.Min(currentHealth + healValue, maxHealth);
     }
 
