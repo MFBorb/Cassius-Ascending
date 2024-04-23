@@ -22,7 +22,7 @@ public class WaveManager : MonoBehaviour
         DestroyEnemies();
         DestroyTiles();
         ResetPlayer();
-        ResetTimer();
+        ResetTimerAndWave();
 
         StartEnemies();
         StartTiles();
@@ -60,7 +60,8 @@ public class WaveManager : MonoBehaviour
         player.transform.position = new Vector3(0.0f, 0.125f, 0.0f);
     }
 
-    private void ResetTimer() {
+    private void ResetTimerAndWave() {
+        timer.wave = wave;
         timer.timer = 0.0f;
     }
 

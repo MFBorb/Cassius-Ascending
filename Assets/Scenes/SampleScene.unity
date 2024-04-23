@@ -4995,10 +4995,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 44.75
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -5267,6 +5267,7 @@ MonoBehaviour:
   timerText: {fileID: 1756397875}
   playerCoins: {fileID: 154887059}
   gameOverScreen: {fileID: 1046922910}
+  wave: 0
   timer: 0
 --- !u!114 &1849582608
 MonoBehaviour:

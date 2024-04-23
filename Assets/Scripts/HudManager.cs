@@ -13,6 +13,7 @@ public class HudManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public CollectCoins playerCoins;
     public GameOverScreen gameOverScreen;
+    public int wave = 0;
 
     public float timer = 0.0f;
 
@@ -52,8 +53,10 @@ public class HudManager : MonoBehaviour
         int seconds = (int) timer;
         int minutes = seconds / 60;
 
+        string waveString = "Wave " + wave + " - ";
+
         timerString = string.Format("{0}:{1, 0:D2}", minutes, seconds % 60);
-        timerText.text = timerString;
+        timerText.text = waveString + timerString;
     }
     void updateCoins()
     {
