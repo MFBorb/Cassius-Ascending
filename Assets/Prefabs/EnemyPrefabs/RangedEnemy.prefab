@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7460707387844551668}
   - component: {fileID: 2386504053219732488}
   - component: {fileID: 7070593967644573876}
-  - component: {fileID: 5918702766583207044}
   m_Layer: 0
   m_Name: RangedEnemy
   m_TagString: Enemy2
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7420587922101351056}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.63, y: 6.09, z: 0.06756188}
   m_LocalScale: {x: 1, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
@@ -146,11 +145,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2030941893
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 744425562, guid: b7e27c5963d3746cba181f51d6b6e0e7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.04511404, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -174,9 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   projectilePrefab: {fileID: 3354889334480790833, guid: c0435abe4a1bf7745b47c64d9625b62e, type: 3}
-  dropOnDeathPrefabs:
-  - {fileID: 3495774790238886689, guid: 32cf37ffd257a2c48a17bef3f47020c1, type: 3}
-  - {fileID: 7864953921323361144, guid: c4973dbf6035aa444b0bf1c9f74439b3, type: 3}
+  coinPrefab: {fileID: 3495774790238886689, guid: 32cf37ffd257a2c48a17bef3f47020c1, type: 3}
   moveSpeed: 0.005
   health: 40
   distanceToShoot: 8
@@ -184,24 +181,3 @@ MonoBehaviour:
   rotateSpeed: 1
   fireRate: 3
   firingPoint: {fileID: 0}
---- !u!95 &5918702766583207044
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7420587922101351056}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb9faacb376eb4707816ba16ca7ce57e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

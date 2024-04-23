@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6420474321294645485}
   m_Layer: 0
   m_Name: FlamePrefab
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.16, y: 2.16}
+  m_Size: {x: 2.4, y: 2.4}
   m_EdgeRadius: 0
 --- !u!50 &7142372395232575745
 Rigidbody2D:
