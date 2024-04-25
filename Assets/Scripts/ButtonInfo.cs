@@ -6,10 +6,25 @@ using UnityEngine.UI;
 public class ButtonInfo : MonoBehaviour
 {
     public int ItemID;
+<<<<<<< Updated upstream
+=======
+    public int buttonID;
+    public GameObject[] itemPrefabs;
+>>>>>>> Stashed changes
     public Text PriceText;
     public Text QuantityText;
     public GameObject ShopManager;
+    public ItemRandomizer randomizer;
     // Start is called before the first frame update
+<<<<<<< Updated upstream
+=======
+    void Start()
+    {
+        randomizer = ShopManager.GetComponent<ItemRandomizer>();
+        int[] list = randomizer.getItemIDList();
+        ItemID = list[buttonID];
+    }
+>>>>>>> Stashed changes
     void Update()
     {
         

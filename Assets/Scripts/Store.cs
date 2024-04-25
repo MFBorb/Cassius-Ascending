@@ -37,6 +37,12 @@ public class Store : MonoBehaviour
         shopItems[3,6] = 1;
     }
 
+    void activateItem(int itemID)
+    {
+            transform.GetChild(itemID).gameObject.SetActive(true);
+            Time.timeScale = 0f;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -48,12 +54,21 @@ public class Store : MonoBehaviour
     {
         CollectCoins coinScript = playerCoins.GetComponent<CollectCoins>();
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
+<<<<<<< Updated upstream
+=======
+        //ButtonRef.GetComponent<ButtonInfo>().ItemID = Random.Range(1, 6);
+>>>>>>> Stashed changes
         
         if (coinScript.coins >= shopItems[2,ButtonRef.GetComponent<ButtonInfo>().ItemID])
         {
             coinScript.coins -= shopItems[2,ButtonRef.GetComponent<ButtonInfo>().ItemID];
             shopItems[3,ButtonRef.GetComponent<ButtonInfo>().ItemID]++;
             ButtonRef.GetComponent<ButtonInfo>().QuantityText.text = shopItems[3,ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();
+<<<<<<< Updated upstream
+=======
+            //ButtonRef.GetComponent<ButtonInfo>().ItemID = Random.Range(1, 6);
+            i++;
+>>>>>>> Stashed changes
         }
     }
 }

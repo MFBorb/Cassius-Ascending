@@ -5,6 +5,12 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
+<<<<<<< Updated upstream
+=======
+    public GameObject bossPrefab;
+    public AudioSource theBossIsIn;
+    public AudioSource uhOhTime;
+>>>>>>> Stashed changes
     public int maxEnemies;
     public int numEnemies = 0;
     public float spawnDelay;
@@ -43,5 +49,14 @@ public class SpawnManager : MonoBehaviour
             Instantiate(enemyPrefabs[index], spawnLocation, enemyPrefabs[index].transform.rotation, this.gameObject.transform);
             numEnemies++;
         }
+<<<<<<< Updated upstream
+=======
+        else if (timer.timer >= 60.0f) {
+            Instantiate(bossPrefab, new Vector3(0, 0, 0), bossPrefab.transform.rotation, this.gameObject.transform);
+            theBossIsIn.Play();
+            //uhOhTime.pitch = 1.5;
+            CancelInvoke();
+        }
+>>>>>>> Stashed changes
     }
 }
