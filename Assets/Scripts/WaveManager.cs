@@ -7,6 +7,7 @@ public class WaveManager : MonoBehaviour
     public GameObject player;
     public GameObject tileManager;
     public GameObject enemyManager;
+    public Shop shop;
     public HudManager timer;
     public int wave = 0;
 
@@ -29,6 +30,7 @@ public class WaveManager : MonoBehaviour
         DestroyTiles();
         ResetPlayer();
         ResetTimerAndWave();
+        ResetShop();
 
         StartEnemies();
         StartTiles();
@@ -69,6 +71,10 @@ public class WaveManager : MonoBehaviour
     private void ResetTimerAndWave() {
         timer.wave = wave;
         timer.timer = 0.0f;
+    }
+
+    private void ResetShop() {
+        shop.GenerateRandomItems();
     }
 
     private void StartEnemies() {

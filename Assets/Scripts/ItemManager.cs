@@ -10,12 +10,6 @@ public class ItemManager : MonoBehaviour
                                         "Iron", "Copper", "Helium", "Steel"};
     public GameObject sparkPrefab;
 
-    void Start() {
-        //foreach (string name in itemNames) {
-            //Buy(name);
-        //}
-    }
-
     public void Buy(string item) {
         switch (item) {
             case "HCl":
