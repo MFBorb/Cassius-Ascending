@@ -6,15 +6,18 @@ using UnityEngine.UI;
 public class ButtonInfo : MonoBehaviour
 {
     public int ItemID;
+    public int buttonID;
     public GameObject[] itemPrefabs;
     public Text PriceText;
     public Text QuantityText;
     public GameObject ShopManager;
+    public ItemRandomizer randomizer;
     // Start is called before the first frame update
     void Start()
     {
-        ItemID = Random.Range(1, itemPrefabs.Length-1);
-        
+        randomizer = ShopManager.GetComponent<ItemRandomizer>();
+        int[] list = randomizer.getItemIDList();
+        ItemID = list[buttonID];
     }
     void Update()
     {

@@ -6,13 +6,9 @@ using UnityEngine.EventSystems;
 
 public class Store : MonoBehaviour
 {
-    public int [,] shopItems = new int[4,7];
-    public GameObject[] itemPrefabs;
+    public int [,] shopItems = new int[4,4];
     public CollectCoins playerCoins;
     public string coinScriptText;
-    public ItemChanges boughtItem;
-    public int i = 1;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -27,19 +23,24 @@ public class Store : MonoBehaviour
         //Price
         shopItems[2,1] = 10;
         shopItems[2,2] = 10;
-        shopItems[2,3] = 10;
-        shopItems[2,4] = 10;
-        shopItems[2,5] = 10;
-        shopItems[2,6] = 10;
-        
+        shopItems[2,3] = 20;
+        shopItems[2,4] = 20;
+        shopItems[2,5] = 20;
+        shopItems[2,6] = 30;
 
         //Quantity
-        shopItems[3,1] = 0;
-        shopItems[3,2] = 0;
-        shopItems[3,3] = 0;
-        shopItems[3,4] = 0;
-        shopItems[3,5] = 0;
-        shopItems[3,6] = 0;
+        shopItems[3,1] = 1;
+        shopItems[3,2] = 2;
+        shopItems[3,3] = 1;
+        shopItems[3,4] = 1;
+        shopItems[3,5] = 1;
+        shopItems[3,6] = 1;
+    }
+
+    void activateItem(int itemID)
+    {
+            transform.GetChild(itemID).gameObject.SetActive(true);
+            Time.timeScale = 0f;
     }
 
     // Update is called once per frame
@@ -51,20 +52,17 @@ public class Store : MonoBehaviour
     
     public void Buy()
     {
-        
         CollectCoins coinScript = playerCoins.GetComponent<CollectCoins>();
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        ButtonRef.GetComponent<ButtonInfo>().ItemID = Random.Range(1, 6);
+        //ButtonRef.GetComponent<ButtonInfo>().ItemID = Random.Range(1, 6);
         
         if (coinScript.coins >= shopItems[2,ButtonRef.GetComponent<ButtonInfo>().ItemID])
         {
-            boughtItem.GetComponent<ItemChanges>().heldItems[i] = itemPrefabs[ButtonRef.GetComponent<ButtonInfo>().ItemID];
-            boughtItem.GetComponent<ItemChanges>().checkItem();
             coinScript.coins -= shopItems[2,ButtonRef.GetComponent<ButtonInfo>().ItemID];
             shopItems[3,ButtonRef.GetComponent<ButtonInfo>().ItemID]++;
             ButtonRef.GetComponent<ButtonInfo>().QuantityText.text = shopItems[3,ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();
-            ButtonRef.GetComponent<ButtonInfo>().ItemID = Random.Range(1, 6);
-            i++;
+            //ButtonRef.GetComponent<ButtonInfo>().ItemID = Random.Range(1, 6);
+            //i++;
         }
     }
 }
