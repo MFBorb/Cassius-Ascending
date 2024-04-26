@@ -128,11 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86191622721b42642ad318486e7b92c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   dropOnDeathPrefabs:
   - {fileID: 3495774790238886689, guid: 32cf37ffd257a2c48a17bef3f47020c1, type: 3}
   - {fileID: 7864953921323361144, guid: c4973dbf6035aa444b0bf1c9f74439b3, type: 3}
-  moveSpeed: 0.00125
+  moveSpeed: 0.75
   damageValue: 2
   health: 200
 --- !u!61 &6243208300481413342

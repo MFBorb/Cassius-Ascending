@@ -4420,7 +4420,7 @@ MonoBehaviour:
   enemyManager: {fileID: 466425458}
   shop: {fileID: 462316278}
   timer: {fileID: 1849582607}
-  wave: 8
+  wave: 0
 --- !u!4 &1704183013
 Transform:
   m_ObjectHideFlags: 0

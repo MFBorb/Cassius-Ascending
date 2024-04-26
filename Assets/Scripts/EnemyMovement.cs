@@ -28,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (Time.timeScale != 0)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed);
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
         }
 
         if (transform.position.x < target.transform.position.x)

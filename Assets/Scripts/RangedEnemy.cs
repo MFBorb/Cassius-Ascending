@@ -35,14 +35,16 @@ public class RangedEnemy : MonoBehaviour
     void Update()
     {
         RotateTowardsTarget();
-        if (Vector2.Distance(target.transform.position, transform.position) >= distanceToStop)
-        {
+        if (Time.timeScale != 0) {
+            if (Vector2.Distance(target.transform.position, transform.position) >= distanceToStop)
+            {
         
-            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed);
-        }
-        if (Vector2.Distance(target.transform.position, transform.position) <= distanceToShoot)
-        {
-            Shoot();
+                transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed);
+            }
+            if (Vector2.Distance(target.transform.position, transform.position) <= distanceToShoot)
+            {
+                Shoot();
+            }
         }
     }
     private void Shoot()
